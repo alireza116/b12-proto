@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import StudentView from "./pages/StudentView";
+import { Container } from "@mui/material";
+import ResponsiveAppBar from "./components/NavBar";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container maxWidth={false} style={{ paddingLeft: 0, paddingRight: 0 }}>
+        <ResponsiveAppBar position="sticky"></ResponsiveAppBar>
+        <StudentView></StudentView>
+      </Container>
     </div>
   );
 }
